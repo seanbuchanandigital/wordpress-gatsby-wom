@@ -1,0 +1,77 @@
+query PREVIEW_QUERY($id: ID!) {
+  client(id: $id, idType: ID, asPreview: true) {
+    ancestors(first: 100) {
+      nodes {
+        id
+        __typename
+      }
+    }
+    categories(first: 100) {
+      nodes {
+        id
+      }
+    }
+    wpChildren: children(first: 100) {
+      nodes {
+        id
+        __typename
+      }
+    }
+    contentType {
+      node {
+        id
+      }
+    }
+    databaseId
+    date
+    dateGmt
+    desiredSlug
+    enclosure
+    guid
+    id
+    lastEditedBy {
+      node {
+        id
+      }
+    }
+    link
+    modified
+    modifiedGmt
+    wpParent: parent {
+      node {
+        id
+        __typename
+      }
+    }
+    parentDatabaseId
+    parentId
+    postTypeClient {
+      clientImage {
+        __typename
+        id
+      }
+      fieldGroupName
+    }
+    slug
+    status
+    tags(first: 100) {
+      nodes {
+        id
+      }
+    }
+    template {
+      templateFile
+      templateName
+      __typename
+    }
+    terms(first: 100) {
+      nodes {
+        id
+        __typename
+      }
+    }
+    title
+    uri
+    __typename
+  }
+}

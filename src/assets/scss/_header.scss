@@ -1,0 +1,104 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Dependencies
+--------------------------------------------------------------*/
+@import "mixins";
+@import "variables";
+@import "global";
+
+/*--Header--*/
+.page-header {
+  background: $primary;
+  .page-header-inner {
+    .container {
+      .row {
+        .col {
+          .branding {
+            .branding-logo {
+              a {
+                img {
+                  width: 150px;
+                  height: auto;
+                }
+              }
+            }
+          }
+          .page-navigation {
+            nav {
+              ul {
+                margin: 0;
+                padding: 0;
+                .menu-item {
+                  list-style: none;
+                  padding-top: 41px;
+                  padding-bottom: 41px;
+                  padding-left: 15px;
+                  padding-right: 15px;
+                  a {
+                    color: white;
+                    font-weight: 300;
+                    text-decoration: none;
+                    position: relative;
+                    &:before {
+                      position: absolute;
+                      content: "";
+                      height: 2px;
+                      width: 0%;
+                      background: white;
+                      bottom: 0;
+                      left: 0;
+                      transition: all 0.3s ease-in-out;
+                    }
+                    &:hover:before {
+                      width: 100%;
+                    }
+                  }
+                }
+                .menu-item:last-child {
+                  cursor: pointer;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  font-family: $font-secondary;
+                  color: white;
+                  background: $primary;
+                  box-shadow: inset 0 0 0 1px white;
+                  padding: 14px 28px 14px 28px;
+                  margin-left: 20px;
+                  text-align: center;
+                  border: none;
+                  cursor: pointer;
+                  -webkit-transition: all 0.3s ease-in-out;
+                  -o-transition: all 0.3s ease-in-out;
+                  transition: all 0.3s ease-in-out;
+                  a {
+                    font-weight: 500;
+                    text-decoration: none;
+                    color: white;
+                    &:before {
+                      display: none;
+                    }
+                    &:after {
+                      content: "";
+                      position: absolute;
+                    }
+                  }
+                  &:hover {
+                    background: white;
+                    box-shadow: inset 0 0 0 1px white;
+                    a {
+                      text-decoration: none;
+                      color: $primary;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,253 @@
+/*--------------------------------------------------------------
+# Modules
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Dependencies
+--------------------------------------------------------------*/
+@import "_global";
+@import "_mixins";
+@import "_animations";
+
+/* Default Container Sizing */
+.container {
+  max-width: 1400px !important;
+}
+
+/* Default Button Styling */
+
+.btn-primary {
+  text-decoration: none !important;
+  text-transform: uppercase;
+  font-family: $font-secondary;
+  color: white !important;
+  background: $primary !important;
+  padding: 14px 28px 14px 28px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  svg {
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    color: $primary !important;
+    background: white !important;
+    box-shadow: inset 0 0 0 1px $primary;
+    svg {
+      animation: bounceRright 1s ease-in-out infinite;
+    }
+  }
+}
+
+.btn-contact {
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $font-secondary;
+  color: $primary;
+  background: white;
+  padding: 14px 28px 14px 28px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  a {
+    text-decoration: none;
+    color: $primary;
+    &:after {
+      content: "";
+      position: absolute;
+    }
+  }
+  &:hover {
+    background: $primary;
+    box-shadow: inset 0 0 0 1px white;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.btn-services {
+  position: relative;
+  text-decoration: none;
+  padding: 10px 0px;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+    background: $brown;
+    transition: all .3s ease-in-out;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $brown;
+  }
+  &:hover:before {
+    animation: sideLoad 2s ease-in-out infinite;
+  }
+}
+
+/*  Input Default Styling */
+input[type="text"],
+input[type="email"],
+textarea {
+  border: none;
+  border-radius: 0px !important;
+  border-bottom: 2px solid $grey !important;
+}
+
+/* Background */
+.bg-primary {
+  background: $primary;
+}
+
+/* Padding */
+.pt-100 {
+  padding-top: 100px;
+}
+
+.p-y-100 {
+  padding: 100px 0px;
+}
+
+/* Sub-heading */
+.sub-heading {
+  color: $primary;
+}
+
+/* Text */
+.text-primary {
+  color: $primary;
+}
+
+.text-grey {
+  color: $grey;
+}
+
+/* List Style */
+.list-style-none {
+  list-style: none;
+}
+
+/* Height */
+.h-min-1000 {
+  min-height: 1000px;
+}
+
+/* Hero Banner */
+.hero-banner {
+  .col {
+    .col-inner {
+      .wrapper {
+        .hero-content {
+          padding: 375px 0px;
+          h2 {
+            font-weight: 500 !important;
+          }
+          p {
+            text-align: center;
+            color: white;
+          }
+          .scroll-prompt {
+            width: 4px;
+            height: 200px;
+            background: rgba(255,255,255,0.6);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%,0%);
+            overflow: hidden;
+            &:before {
+              content: "";
+              background: white;
+              display: block;
+              width: 100%;
+              height: 100%;
+              animation: scrollPrompt 3s ease-in-out infinite;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Section Services */
+.services {
+  .container {
+    .row {
+      .col {
+        .heading {
+          h2 {
+            font-size: 2.325rem;
+            font-weight: 500;
+          }
+        }
+        .link {
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+/* Section Projects */
+.project-image {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Title */
+.project-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  white-space: nowrap;
+  color: white;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/* Section Footer */
+.section-footer {
+  .row {
+    .col {
+      .branding {
+        .branding-logo {
+          a {
+            img {
+              width: 200px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

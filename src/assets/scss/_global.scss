@@ -1,0 +1,43 @@
+/*--------------------------------------------------------------
+# Global
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Dependencies
+--------------------------------------------------------------*/
+@import "font";
+
+/*--Colour--*/
+$primary: #007bff;
+$secondary: #333;
+$grey: #999;
+$brown: #333;
+
+/*--Font--*/
+
+$font-primary: "Poppins", sans-serif;
+$font-secondary: "Poppins", sans-serif;
+
+// body
+
+body {
+  overflow-x: hidden;
+}
+
+// Paragraphs, Anchor Tags, Labels, Span,
+
+p,
+a,
+label,
+span {
+  font-family: $font-primary;
+}
+
+// Headings
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-primary;
+}

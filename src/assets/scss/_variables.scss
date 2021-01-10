@@ -1,0 +1,110 @@
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Dependencies
+--------------------------------------------------------------*/
+@import "global";
+@import "mixins";
+
+/*--Font--*/
+
+// Default Font-size
+
+$breakpoints: (
+  small: 480px,
+  medium: 700px,
+  large: 1024px,
+);
+
+$p-font-sizes: (
+  null: 15px,
+  small: 16px,
+  medium: 17px,
+  large: 19px,
+);
+
+$a-font-sizes: (
+  null: 15px,
+  small: 16px,
+  medium: 17px,
+  large: 19px,
+);
+
+$h1-font-sizes: (
+  null: 29px,
+  small: 32px,
+  medium: 40px,
+  large: 48px,
+);
+
+$h2-font-sizes: (
+  null: 23px,
+  small: 26px,
+  medium: 32px,
+  large: 36px,
+);
+
+$h3-font-sizes: (
+  null: 20px,
+  small: 22px,
+  medium: 24px,
+  large: 28px,
+);
+
+$h4-font-sizes: (
+  null: 18px,
+  small: 18px,
+  medium: 18px,
+  large: 18px,
+);
+
+p {
+  @include font-size($p-font-sizes);
+}
+
+h1 {
+  @include font-size($h1-font-sizes);
+}
+
+h2 {
+  @include font-size($h2-font-sizes);
+}
+
+h3 {
+  @include font-size($h3-font-sizes);
+}
+
+h4 {
+  @include font-size($h4-font-sizes);
+}
+
+// Default Font-weight
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 400;
+  color: $grey;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/*--Padding--*/
+
+// Default Padding
+
+$sm: 1rem;
+$md: 1.7rem;
+$lg: 2.8rem;
